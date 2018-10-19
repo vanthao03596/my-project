@@ -1,26 +1,12 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <div>
-      <p>
-        If Element is successfully added to this project, you'll see an
-        <code v-text="'<el-button>'"></code>
-        below
-      </p>
-      <el-button>el-button</el-button>
+     <router-view></router-view>
     </div>
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
 export default {
   name: 'app',
-  components: {
-    HelloWorld
-  }
 }
 </script>
 
@@ -31,6 +17,27 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+}
+/* #nprogress .bar {
+  background: #159957 !important;
+} */
+#nprogress .bar {
+  height: 4px !important;
+  background: #27c4f5 linear-gradient(to right,#27c4f5,#a307ba,#fd8d32,#70c050,#27c4f5) !important;
+  background-size: 500% !important;
+  animation: 2s linear infinite barprogress, .3s fadein !important;
+  width: 100% !important;
+}
+@keyframes barprogress{
+  0% {
+    background-position:0% 0
+  }
+  to{
+    background-position:125% 0
+  }
+}
+#nprogress .spinner-icon {
+  border-top-color: transparent !important;
+  border-left-color: transparent !important;
 }
 </style>
